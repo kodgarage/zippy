@@ -1,0 +1,228 @@
+/*==========complete profile form =============*/
+
+.profile-input-margin {
+  margin-top: 15px;
+}
+
+.file-icon {
+  position: absolute;
+  top: 38px;
+  right: 25px;
+}
+
+.check-box {
+  font-size: 14px;
+  line-height: 1.24;
+  color: #a5abb4;
+}
+
+.check-box-color {
+  font-size: 14px;
+  line-height: 1.24;
+  color: #72c800;
+}
+
+.profile-button {
+  width: 347px;
+  height: 50px;
+  border-radius: 3px;
+  background-color: #fff;
+  border: solid 3px #462b68;
+  color: #462b68;
+  font-size: 22px;
+  outline: none !important;
+}
+
+.removeBorder {
+  outline: none !important;
+}
+
+.profile-button-pwd {
+  width: 300px;
+  height: 50px;
+  border-radius: 3px;
+  background-color: #fff;
+  border: solid 3px #462b68;
+  color: #462b68;
+  font-size: 22px;
+  outline: none !important;
+}
+
+.profile-button-save {
+  width: 300px;
+  height: 50px;
+  border-radius: 3px;
+  background-color: #462b68;
+  border: solid 3px #462b68;
+  color: #fff;
+  font-size: 22px;
+  outline: none !important;
+}
+
+.image-err-focus {
+  border: 0 none;
+  color: #fff;
+  font-size: 0;
+  height: 0;
+  background-color: #fff;
+  cursor: none;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.view-doc-profile-margin {
+  margin-top: 8px;
+  text-align: right;
+}
+
+.view-doc-profile {
+  margin-top: 5px;
+  color: #462b68;
+  text-decoration: none;
+}
+
+.view-doc-profile:hover,
+.view-doc-profile:active,
+.view-doc-profile:visited,
+.view-doc-profile:link {
+  color: #462b68;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .profile-button {
+    width: 280px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .profile-button {
+    width: 200px;
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+  .profile-button-pwd {
+    width: 250px;
+    height: 45px;
+    font-size: 20px
+  }
+  .profile-button-save {
+    width: 250px;
+    height: 45px;
+    font-size: 20px
+  }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 1199px) {
+  .profile-button-pwd {
+    width: 200px;
+    height: 45px;
+    font-size: 18px
+  }
+  .profile-button-save {
+    width: 200px;
+    height: 45px;
+    font-size: 18px
+  }
+}
+
+@media only screen and (max-width: 649px) {
+  .profile-button-pwd {
+    width: 150px;
+    height: 42px;
+    font-size: 16px
+  }
+  .profile-button-save {
+    width: 150px;
+    height: 42px;
+    font-size: 16px
+  }
+}
+
+@media only screen and (max-width: 528px) {
+  .profile-btn-margin {
+    margin-top: 10px;
+  }
+  .small-center {
+    text-align: center
+  }
+}
+
+
+/*==========user profile form =============*/
+
+.user-input-margin {
+  margin-top: 30px;
+}
+
+.user-btn {
+  font-family: 'helveticaregular', sans-serif !important;
+  width: 300px;
+  height: 50px;
+  font-size: 22px;
+  border-radius: 3px;
+  background-color: #462b68;
+  border: none;
+  color: #fff;
+  outline: none;
+}
+
+.user-btn-margin {
+  margin-top: 100px;
+}
+
+.user-camera {
+  position: absolute;
+  bottom: -30px;
+  right: 0px;
+  cursor: pointer;
+  outline: none;
+}
+
+.user-image {
+  width: 100px;
+  height: 100px;
+  outline: none;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+  .user-btn {
+    width: 250px;
+    height: 48px;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 1280px) {
+  .user-btn {
+    width: 200px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
+
+
+@media only screen and (max-width: 399px) {
+  .user-btn {
+    width: 150px;
+    height: 35px;
+    font-size: 15px;
+  }
+}
+
+
+/*=========add card css========*/
+
+.card-active {
+  display: inline-block;
+  border: 2px solid #8ab9e8;
+  box-shadow: 0px 0px 9px #3399ff;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}

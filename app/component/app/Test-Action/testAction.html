@@ -1,0 +1,29 @@
+<div>
+  <div class="selected-app-logo"><img ng-src="{{templateData.image_url || 'app/image/icon.png'}}"></div>
+  <div class="selected-app-head">Select {{templateData.name}} Account</div>
+  <div class="test-padd">
+    <!--<div class="test-padd">-->
+    <div class="test-success"><i class="fa fa-check-circle" aria-hidden="true"></i> <b>Test Successful!</b></div>
+    <div class="test-content">
+      Alright got it! You can <a href="javaScript:;" ng-click="showTaskData()">view your task status update</a> to make sure
+      everything looks OK.<br>We'll use this as a sample for setting up the rest of your Workflow.
+    </div>
+    <div class="re-test" style="display:none;"><i class="fa fa-undo"></i> Re-test {{testDataa.name}} to get another task status update</div>
+    <div ng-if="taskData" class="taskdata">
+      <div class="task-border">
+        <!--<div ng-repeat="(key, data) in messageAction track by $index" class="taskrepeat">-->
+
+        <div ng-repeat="(key, data) in triggerResponseObj track by $index" class="taskrepeat">
+          <span class="keyValue">{{key}}</span>: <span class="DataValue">{{data==null?'NA':data}}</span>
+        </div>
+      </div>
+    </div>
+      <div ng-if="triggerReponseCount==0" class="taskdata">   
+        <div class="no-task-border">
+            <div>No Task To View!!</div>
+        </div>
+    </div>
+    <!--<div class="test-success-btn"><button class="re-test-btn" ng-click="testAction()">Finish</button></div>-->
+    <div class="test-success-btn layout-xs-row layout-align-xs-center-center"><button class="re-test-btn" ui-sref="app.overview">Finish</button></div>
+  </div>
+</div>

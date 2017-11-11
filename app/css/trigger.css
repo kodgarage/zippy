@@ -1,0 +1,126 @@
+.inactive-style{
+    opacity:0.5;
+    border: 1px solid #ccd3d7 !important;
+    /*color: #a1aeb5 !important;*/
+}
+
+.trigger-app-logo{
+    text-align: center;
+    margin-top: 4%;
+}
+
+.trigger-app-logo img{
+    width: 50px;
+    height: 50px;
+}
+
+.trigger-content-head{
+    font-size: 20px;
+    text-align: center;
+    color: #354052;
+    padding: 24px 0px;
+    border-bottom: 2px solid #ff8433;
+}
+
+.action-name{
+    color: #354147;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5em;
+    padding: 20px 20px 0 20px;
+    text-align: left;
+    margin-left: 150px;
+}
+.action-desc{
+   color: #969EA2;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5em;
+    padding: 10px 0 10px 0;
+    padding-left: 20px;
+    text-align: left;
+    margin-left: 150px;
+}
+
+
+.continue-div-trigger{
+    text-align: right;
+}
+.continue-button-trigger{
+    background-color: #ff8433;
+    box-shadow: none !important;
+    /*height: 20px;*/
+    width: 150px;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 10px 16px;
+    cursor: pointer;
+    /*border-radius: 4px;*/
+    font-weight: 600;
+    outline: 0;
+}
+
+.action-row-selected{
+    border-bottom: 1px solid #f2f2f2;
+}
+.one-tenth{
+    width: 10%;
+}
+.column {
+    display: inline-block;
+    float: left;
+    text-align: left;
+    padding: 0 10px;
+    margin: 10px;
+}
+
+.one-tenth input[type="radio"]{
+    margin-top: 16px;
+}
+.nine-tenths{
+    width: 90%;
+}
+
+.action-namee{
+    color: #354147;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5em;
+    padding: 0;
+}
+.help-text{
+    color: #969EA2;
+}
+
+.action-row-selected {
+  background: #eee none repeat scroll 0 0;
+  line-height: 26px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  padding: 8px 16px;
+  margin: 16px;
+  cursor: pointer;
+
+}
+.action-row-selected .column {
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+    margin: auto 0;
+}
+
+.radio-label{
+    width: 100%;
+}
+
+.inactivestyleTrigger{
+    cursor: not-allowed;
+    opacity: 0.7;
+    }

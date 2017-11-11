@@ -1,0 +1,17 @@
+<div>
+  <div class="trigger-app-logo"><img src="{{actionData.image_url || 'app/image/icon.png'}}"></div>
+  <div class="selected-action-head">Select {{actionData.name}} Action</div>
+  <label class="action-row-selected" ng-repeat="action in actionList" ng-class="editDisable?'inactivestyleTrigger':''">
+        <div class="column onetenth">
+            <input type="radio" name="action" ng-click="changeAction(action)" ng-model="actionSelected" value="{{action.name}}" ng-disabled="editDisable">
+        </div>
+        <div class="column ninetenths">
+            <div class="action-namee">{{action.name}}</div>
+            <div class="help-text">{{action.details}}.</div>
+        </div>
+    </label>
+
+  <div class="continue-div-trigger">
+    <button type="button" class="continue-button-trigger" ng-disabled="disableBtton || editDisable" ng-class="disableBtton|| editDisable ? 'inactive-style':''" ng-click="selectAction()">Save + Continue</button>
+  </div>
+</div>

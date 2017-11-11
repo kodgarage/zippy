@@ -1,0 +1,200 @@
+.profile-left-sidenav {
+    width: 18%;
+    min-width: 250px;
+    height: inherit;
+    background-color: #ffffff;
+    border-bottom-right-radius: 10px;
+}
+
+.profile-main-view {
+    height: inherit;
+    width: 100%;
+    overflow: auto !important;
+}
+
+.profile-section {
+    /* height: 100vh; */
+    overflow: hidden;
+    /* margin-bottom: 20px; */
+}
+
+.active-section {
+    background-color: #d7e0e8;
+    border-left: 10px solid #ff8433;
+    padding-left: 16px !important;
+}
+
+.p-items {
+    height: 48px;
+    padding: 16px;
+    padding-left: 26px;
+    margin-right: 16px;
+    outline: none;
+    font-size: 18px;
+}
+
+.section-view {
+    background-color: #ffffff;
+    height: auto;
+    border-radius: 10px;
+    padding: 32px;
+    min-height: 610px;
+    /*margin-bottom: 40px;*/
+}
+
+.profile-right-section {
+    width: inherit;
+    padding: 16px;
+    height: calc(100vh - 73px);
+    margin-top: 16px;
+    padding-bottom: 0px !important;
+    overflow: auto;
+}
+
+.name-section {
+    width: 48%;
+    /*margin-left: 16px;*/
+    max-width: 300px;
+    min-width: 250px;
+}
+
+.name-section:first-child {
+    margin-left: 0px;
+}
+input{
+  border: 1px solid #eaeaea;
+}
+
+.pad-td-8 {
+    padding: 8px 0px;
+}
+
+.p-price-card {
+    width: 33.3%;
+    min-width: 284px;
+    height: 310px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+    margin: 10px 10px;
+    padding: 16px 0px;
+    max-width: 330px;
+}
+
+.h-style {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.pad-t-16 {
+    padding-top: 16px;
+}
+
+.pad-16 {
+    padding: 16px;
+}
+
+.pad-l-16 {
+    padding-left: 16px;
+}
+
+.p-price-value {
+    font-size: 3.5em !important;
+}
+
+sup {
+    top: -1.0em;
+}
+
+.margin-mt-16 {
+    margin-top: -16px;
+}
+
+.p-button {
+    width: 60%;
+    margin: 16px;
+    font-size: 18px;
+}
+
+.p-btn-update {
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.update-btn-p {
+    background-color: #ff8433;
+    border-radius: 5px;
+    font-size: 18px;
+    outline: none;
+}
+
+.p-changepassword-section {
+    background-color: #ffffff;
+    padding: 16px;
+    margin-top: 30px;
+    border-radius: 5px;
+    padding-left: 0px;
+}
+
+.p-progress {
+    background-color: #ff8433;
+    height: inherit;
+    border-radius: 5px;
+    /*min-width: 2px;*/
+    padding-left: 4px;
+}
+
+.p-progressbar {
+    height: 20px;
+    background-color: #d7e0e8;
+    border-radius: 5px;
+    width: 100%;
+    margin: 10px 0px;
+    max-width: 400px;
+}
+
+.p-pro {
+    height: 108px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.otherclass {
+    transform: translate3d(-250px, 0, 0)
+}
+
+@media only screen and (min-width: 400px) and (max-width: 768px) {
+    .name-section {
+        width: 48%;
+        max-width: 300px;
+        min-width: 224px;
+    }
+}
+
+.profile-section .topbar-left {
+    width: auto;
+}
+
+.profile-section .dropdown-menu {
+    float: right;
+    left: inherit !important;
+    right: 0;
+}
+
+.profile-section .dropdown-menu a {
+    cursor: pointer;
+}
+
+label {
+    font-weight: 100;
+}
+/*.flabel label{
+    font-size: 16px !important;
+}*/
+button, select, html, textarea, input {
+    font-size: 'proxima_novaregular'!important;
+}
+.new-style-sidenav{
+    box-shadow: 1px 1px 1px 0px !important;
+}

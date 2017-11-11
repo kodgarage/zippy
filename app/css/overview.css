@@ -1,0 +1,74 @@
+.overview-content {
+  text-align: center;
+}
+
+.overview-head {
+  color: #5F6C72;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 20px;
+}
+
+.overview-content {
+  color: #969EA2;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.overview-input {
+  border: 2px solid #ffcc58;
+  background: #fffbf1;
+  max-width: 360px;
+  height: 44px;
+  padding-left: 10px;
+  color: #5F6C72;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.toggle-container {
+  padding: 20px;
+}
+
+.toggle-label {
+  color: #969EA2;
+  font-size: 1em;
+  font-weight: 600;
+  /* float: left; */
+  letter-spacing: 1px;
+  margin: 0.8em 0.8em 0.7em 0;
+  text-transform: uppercase;
+}
+
+.overview-msg {
+  color: #969EA2;
+  margin: 20px;
+}
+
+.move-to-dashboard {
+  background-image: none;
+  background-color: #ff8433;
+  color: #fff;
+  border-color: transparent;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  width: 100px;
+}
+
+.tg-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* width: 400px; */
+  align-items: center;
+  justify-content: center;
+}
+
+.tg-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

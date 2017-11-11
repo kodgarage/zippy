@@ -1,20 +1,61 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html lang="en" ng-app="praosHospitalPanel" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="praosHospitalPanel" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="praosHospitalPanel" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="bumble" class="no-js overflow-h"> <!--<![endif]-->
+<html lang="en" ng-app="bumble overflow-h">
     <head>
+        <base href="/">
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="pragma" content="no-cache" />
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Zippy</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link rel="apple-touch-icon" sizes="120x120" href="app/image/apple-icon-120x120.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="app/image/favicon-16x16.png">
+      <link rel="shortcut icon" href="app/image/favicon.ico" type="image/x-icon">
+      <link rel="icon" href="app/image/favicon.ico" type="image/x-icon">
+
+        <title>Bumbl Dashboard</title>
+        <!--============Node module=================-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="app/css/app.css">
+        <link rel="stylesheet" href="app/dist/vendorBundle.css">
+        <link rel="stylesheet" href="app/css/dashboard.css">
+        <link rel="stylesheet" href="app/css/logIn.css">
+        <link rel="stylesheet" href="app/css/explore.css">
+        <link rel="stylesheet" href="app/css/trigger.css">
+        <link rel="stylesheet" href="app/css/account.css">
+        <link rel="stylesheet" href="app/css/webhook.css">
+        <link rel="stylesheet" href="app/css/test.css">
+        <link rel="stylesheet" href="app/css/sample.css">
+        <link rel="stylesheet" href="app/css/overview.css">
+        <link rel="stylesheet" href="app/css/chooseAction.css">
+        <link rel="stylesheet" href="app/css/workflow.css">
+        <link rel="stylesheet" href="app/css/profileaccount.css">
+        <link rel="stylesheet" href="app/css/history.css">
+
+        <link rel="stylesheet" href="app/css/setupTemplate.css">
+
+        <!--<link rel="stylesheet" href="app/dist/componentBundle.css">-->
     </head>
-    <body>
-        <div>Hello world</div>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
+    <body class="overflow-h">
+        <div ui-view="" data-autoscroll="false" class="wrapper layout-column"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3ALcj4jlFjOXYgytn_VZHNUI0X1fonxk&libraries=places,drawing" async defer></script>
+        <!--============Node module=================-->
+        <script src="app/dist/vendorBundle.js"></script>
+        <!--==============stripe==============-->
+        <script src="https://js.stripe.com/v2/"></script>
+        <!--==============pagination==============-->
+        <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+         <!--<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>-->
+        <!--==============socket==============-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+        <!--============main js=================-->
+        <script src="env.js"></script>
+        <!-- environment file  -->
+        <script src="app/dist/componentBundle.js"></script>
     </body>
 </html>

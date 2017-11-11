@@ -1,0 +1,34 @@
+<div class="maincontent">
+    <div id="pagewrapper" style="">
+        <div id="page-container" ui-view>
+            <div style="max-width: 800px; margin: auto;">
+                <div style="padding: 10vh 20px 20px;">
+                    <div class="error-container" >
+                        <div class="title">
+                            <h1 class="title-text"><img style="width: 50px;" src="./app/image/error-circle.jpg"> Server not found</h1>
+                        </div>
+                        <div id="errorLongContent">
+                            <div id="errorShortDesc">
+                                <p id="errorShortDescText">Browser can’t find the server at www.PraosHealth.com.</p>
+                            </div>
+                            <div id="errorLongDesc">
+                                <ul xmlns="http://www.w3.org/1999/xhtml">
+                                    <li>Check the address for typing errors such as
+                                        <strong>ww</strong>.example.com instead of
+                                        <strong>www</strong>.example.com</li>
+                                    <li>If you are unable to load any pages, check your computer’s network
+                                        connection.</li>
+                                    <li>If your computer or network is protected by a firewall or proxy, make sure
+                                        that Firefox is permitted to access the Web.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="netErrorButtonContainer" class="button-container">
+                            <a id="errorTryAgain" ng-click="vm.goTOPreviousState()" class="try-again" autocomplete="off" autofocus="true">Try Again</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+<div class="workflow-style">
+  <div class="topbar layout-row layout-align-space-between-center flex-100">
+    <div class="topbar-left flex-50 layout-row layout-align-space-between-center">
+      <div class="layout-row layout-align-center-center">
+        <div class="toggle-button pull-left" ng-click="openLeftMenu()" id="toggleSideMenu">
+          <i class="fa fa-bars fa-lg toggle-bar" aria-hidden="true"></i>
+        </div>
+        <div class="layout-row">
+          <!--<span class="dashbrd-pointer hide-gt-xs" ui-sref="dashboard"><i class="material-icons">dashboard</i></span>-->
+          <span class="dashbrd-pointer" ui-sref="dashboard">Dashboard</span></div>
+      </div>
+      <!--</div>-->
+
+
+      <!--<div class="topbar-center flex-33 layout-row layout-align-center-center flex-xs-45 flex-sm-45">-->
+      <div>
+        <a ui-sref="dashboard">
+        <img src="app/image/Logo_small.png" style="width: 40px;cursor:pointer"></a>
+      </div>
+    </div>
+
+    <div class="topbar-right flex-50 layout-row layout-align-end-center">
+      <!--<button class="make-workflow-btn" ui-sref="app.triggerapp"><i class="material-icons hide-gt-xs">add_circle</i><span class="hide-xs">Create A Bumbl</span></button>-->
+      <button class="make-workflow-btn" ng-click="goToTrigger()"><i class="material-icons hide-gt-xs">add_circle</i><span class="hide-xs">Create A Bumbl</span></button>
+      <div class="g-userprofile">
+        <div>
+          <div class="dropdown">
+            <button class="btn dropdown-toggle p-toogle-btn" type="button" data-toggle="dropdown" style="outline:none;"><i class="material-icons" style="color:#ffffff;">settings</i>
+              <!--<span class="caret"></span>-->
+              <!--<md-tooltip>Settings</md-tooltip>-->
+            </button>
+            <ul class="dropdown-menu">
+              <li style="height:42px;">
+                <a ui-sref="profile" class="p-anchor">
+                <i class="fa fa-user margin-r-16" aria-hidden="true"></i>
+                Account</a>
+              </li>
+              <li style="height:42px;"><a ng-click="logout()" class="p-anchor"><i class="fa fa-sign-out margin-r-16" aria-hidden="true"></i>Log out</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="common-section-workflow">
+    <div class="l-sidebar-section">
+      <!--<button class="item-style" ng-click="goDashboard()"><span class="w-sidebar-items">Create Bumbl</span><i class="fa fa-plus-circle conditional-style" aria-hidden="true" title="Create Bumbl"></i></button>-->
+      <button class="item-style"><span class="w-sidebar-items">Manage Bumbl</span><i class="fa fa-bars conditional-style" aria-hidden="true" title="Manage Bumbl"></i></button>
+
+    </div>
+
+    <div class="r-sidebar-section flex-auto">
+      <div>
+        <span class="my-bumbl">My Bumbl</span>
+      </div>
+      <div ng-if="appDataList.data.length < 1">You don't have any Bumbl created yet. Create your first Bumbl!</div>
+      <div class="app-list-section" ng-repeat="appItems in appDataList.data">
+        <div class="app-data-items layout-row layout-align-space-between-center">
+          <div class="layout-row layout-pointer layout-align-space-between-center layout-xs-column" style="width:100%;" ng-click="goToHistory(appItems.taskId)">
+            <div class="layout-row">
+              <div class="app-logo-style"> <img class="app-data-logo" ng-src="{{appItems.triggerAppImageUrl||'app/image/icon.png'}}"> </div> <i class="fa fa-caret-right custom-icon-filter"
+                aria-hidden="true"></i>
+              <div class="app-logo-style"> <img class="app-data-logo" ng-src="{{appItems.actionAppImageUrl||'app/image/icon.png'}}">
+              </div>
+            </div>
+            <div class="message-style">
+              <p style="margin:0 10px;" ng-hide="appItems.taskName">Post a new message to {{appItems.actionAppName}} whenever a {{appItems.triggerAppName}} is updated</p>
+              <p ng-cloak>{{appItems.taskName}}</p>
+            </div>
+          </div>
+
+          <div class="layout-row">
+            <button class="onbtn" ng-show="appItems.isEnabled" ng-click="appItems.isEnabled = !appItems.isEnabled;updateStatus(appItems);">
+              <span class="dot-r"></span> <span style="margin-right: -32px;">ON</span> 
+            </button>
+            <button class="offbtn" ng-hide="appItems.isEnabled" ng-click="appItems.isEnabled = !appItems.isEnabled;updateStatus(appItems);">
+              <span style="margin-right:-30px;">OFF</span><span class="dot"></span>
+            </button>
+            <div><button ng-click="editWorkflow(appItems)"  style="margin-left: 16px;background-color:#ffffff;color:#969EA2;outline:none;"><i class="material-icons">mode_edit</i></button></div>  
+            <div><button class="btn-icon" ng-click="showConfirm($event,appItems)"><i class="material-icons">delete</i></button></div>         
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

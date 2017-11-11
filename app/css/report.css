@@ -1,0 +1,73 @@
+/*===========change style of daterangepicker=================*/
+.daterangepicker .ranges li.active, .daterangepicker .ranges li:hover {
+    background: #3d265d none repeat scroll 0 0;
+    border: 1px solid #3d265d;
+    color: #fff;
+}
+.daterangepicker .ranges li {
+    color: #333;
+    font-size: 15px;
+}
+.range_inputs {
+    text-align: center;
+}
+.daterangepicker_start_input {
+}
+.range_inputs > div {
+    text-align: center;
+    width: 50%;
+}
+input {
+}
+.daterangepicker .range_inputs > div input.input-mini {
+    width: 80%;
+}
+.range_inputs > button {
+    float: left;
+    width: 40%;
+}
+.range_inputs > button + button {
+    float: right;
+    width: 38%;
+}
+.daterangepicker .ranges .range_inputs > div + div {
+    float: right;
+    text-align: right;
+}
+.daterangepicker .ranges .range_inputs > div + div input {
+    float: right;
+}
+.daterangepicker .ranges ul {
+    width: auto !important;
+}
+.daterangepicker .daterangepicker_start_input label, .daterangepicker .daterangepicker_end_input label {
+    color: #333;
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    height: auto;
+    line-height: 20px;
+    margin-bottom: 2px;
+    text-align: center !important;
+    text-shadow: 1px 1px 0 #fff;
+    text-transform: uppercase;
+    width: 80%;
+}
+.daterangepicker .ranges .input-mini {
+    font-size: 13px;
+}
+.dateRangeCls{
+    background: #462b68 none repeat scroll 0 0;
+    border: 1px solid #462b68;
+    color: #fff;
+    cursor: pointer;
+    padding: 9px 10px;
+    width: 100%;
+}
+.daterangepicker .ranges{width: 230px;}
+@media only screen  and (max-width: 767px) {
+    .daterangepicker .ranges {
+        text-align: left;
+        width: auto;
+    }
+}

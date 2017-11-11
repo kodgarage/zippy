@@ -1,0 +1,26 @@
+<div ng-class="editDisable?'inactivestyle':''">
+  <div class="content-head">Choose an Action App</div>
+  <div class="search-head">
+    <input class="search-apps" type="text" ng-model="customSelected" placeholder="Search hundreds of apps…" uib-typeahead="state as state.name for state in allApp | filter:{name:$viewValue}"
+      typeahead-template-url="customTemplate.html" class="form-control" typeahead-show-hint="true" typeahead-min-length="0"
+      typeahead-on-select="onSelect($item, $model, $label)" ng-disabled="editDisable">
+  </div>
+  <script type="text/ng-template" id="customTemplate.html">
+    <a>
+        <img ng-src="{{match.model.image_url || 'app/image/icon.png'}}" width="16">
+        <span ng-bind-html="match.model.name | uibTypeaheadHighlight:query"></span>
+    </a>
+  </script>
+  <div>
+    <div class="row allApp-pad">
+        <button class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center allApp-main" ng-repeat="app in allApp"  ng-disabled="editDisable" ng-hide="{{app.actionsCount==0}}"
+            ng-click="selectAppFun(app)">
+            <!--<div class="appmain" ng-class="app.actionsCount==0 ? 'inactivestyle':''" >-->
+            <div class="appmain" ng-class="selectedAppBg == app.app_id ?'b-selected-app':''" >
+                <div><img ng-src="{{app.image_url || 'app/image/icon.png'}}" class="allApp-img"></div>
+                <div class="allApp-name">{{app.name}}</div>
+            </div>
+        </button>
+    </div>
+  </div>
+</div>

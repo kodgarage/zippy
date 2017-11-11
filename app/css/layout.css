@@ -1,0 +1,530 @@
+.formpage .form-error {
+    bottom: -17px;
+    font-size: 11px;
+    position: absolute;
+    right: 18px;
+}
+
+.formpage .inside-input-top {
+    position: absolute;
+    right: 22px;
+    top: -34px;
+}
+
+.formpage .select-style .bootstrap-select button {
+    height: 40px;
+}
+
+.formpage .select-style {
+    border: 1px solid transparent;
+}
+
+.editsidebar {
+    position: absolute;
+    right: 30px;
+    top: 15px;
+}
+
+.sideMenu-log.topsibebar {
+    position: relative;
+}
+
+.topsibebar img.proimg {
+    width: 100px;
+    height: 100px;
+}
+
+.formspace .form-dept-input {
+    height: 40px;
+}
+
+.form-dept-label {
+    height: 37px;
+}
+
+.department-button {
+    height: 40px;
+}
+
+.departmentpage .dept-row-add .form-error.setpos {
+    bottom: -22px;
+    position: absolute;
+    right: 0;
+}
+
+.comsec {
+    min-height: 45px;
+    position: relative;
+}
+
+.side-image {
+    height: 100px;
+    width: 100px;
+}
+
+.sideMenu-name {
+    font-size: 16px;
+    margin: 12px 0 0;
+    text-align: center;
+}
+
+.form-input {
+    height: 40px;
+}
+
+.comsec .select-style .bootstrap-select button {
+    height: 40px;
+    padding-right: 48px;
+}
+
+.departmentpage .form-dept-input {
+    padding: 0 70px 1px 5px;
+}
+
+.departmentpage .dept-row-add .form-error.setpos .dept-inside-input {
+    font-size: 12px;
+    right: 52px;
+    top: -28px;
+}
+
+.departmentpage .dept-row-add .form-error {
+    font-size: 11px;
+    padding: 6px 0;
+}
+
+md-pagination-wrapper {
+    height: 48px !important;
+}
+
+md-tabs-canvas {
+    height: 48px !important;
+}
+
+.my-menubar {
+    height: 49px;
+}
+
+md-tabs.md-default-theme .md-tab,
+md-tabs .md-tab {
+    color: #9f8ea0;
+    /*font-family: Montserrat;*/
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.my-sidebar {
+    width: 297px;
+}
+
+.sidebarsec .sideMenu-info {
+    font-size: 14px;
+    padding: 35px 0 10px;
+}
+
+.signIn-button-margin {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.ferror {
+    bottom: -19px;
+    font-size: 12px;
+    padding: 5px 0 0;
+    position: absolute;
+    right: 0;
+}
+
+.ferror .inside-input-pwd {
+    right: 10px;
+    top: -27px;
+}
+
+.sideMenu-log {
+    display: block;
+    margin-top: 30px;
+    padding-left: 0;
+    text-align: center;
+}
+
+.pagesignin .ferror {
+    bottom: -7px;
+    font-size: 11px;
+    padding: 5px 0 0;
+    position: absolute;
+    right: 16px;
+}
+
+.pagesignin .inside-input {
+    position: absolute;
+    right: 10px;
+    top: -29px;
+    z-index: 10;
+}
+
+.pagesignin .ffiled {
+    padding-bottom: 8px;
+}
+
+.signIn-from-padding {
+    margin-top: 40px;
+}
+
+.signIn-form-header {
+    font-size: 30px;
+}
+
+.ffiled {
+    position: relative;
+}
+
+.table > thead > tr > th {
+    white-space: nowrap;
+}
+
+.departmentpage .table > tbody > tr > td:last-child {
+    min-width: 80px;
+}
+
+
+/*Edit Css 31-March*/
+
+.ngdialog.ngdialog-theme-default.custommodal {
+    padding: 200px 0 200px;
+}
+
+.ngdialog.ngdialog-theme-default.custommodal .ngdialog-content {
+    height: auto !important;
+    max-width: 455px !important;
+    width: auto !important;
+}
+
+.custommodal .dialogheader {
+    font-size: 19px;
+    margin: 0;
+    padding: 12px 0 15px;
+    color: #462b68;
+    text-align: center;
+}
+
+.modalform-sec {
+    margin: 0 auto 30px;
+    max-width: 370px;
+    position: relative;
+}
+
+.modal-btn .modalbtn {
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 16px;
+    height: 43px;
+    width: 120px;
+}
+
+.modal-btn {
+    margin: 0px 0 0;
+    text-align: center;
+}
+
+.btnbottom {
+    padding-top: 17px;
+    text-align: center;
+    outline: none;
+}
+
+.dialogcontent {
+    color: #9b9b9b;
+    font-size: 16px;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 25px;
+    margin-bottom: 15px;
+    margin-top: -5px;
+    min-height: inherit;
+    text-align: center;
+}
+
+
+.pagesignin span.passheight {
+    bottom: inherit;
+    margin: 2px 0 0;
+    padding: 0;
+    position: relative;
+    right: inherit;
+    text-align: right;
+}
+
+
+
+@media only screen and (min-width: 1350px) {
+    .mainmenubar .md-tab {
+        width: 20%;
+    }
+    .mainmenubar .md-tab:nth-child(1) {
+        width: 13%;
+    }
+    .mainmenubar md-pagination-wrapper {
+        width: 100% !important;
+    }
+    .mainmenubar .md-tab:nth-child(2) {
+        width: 13%;
+    }
+    .mainmenubar .md-tab:nth-child(5) {
+        width: 14%;
+    }
+
+    .nursemainbar md-pagination-wrapper {
+        width: 100% !important;
+    }
+    .nursemainbar .md-tab {
+        width: 20%;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .formspace {
+        min-height: 52px;
+    }
+    .departmentpage .dept-row-add .form-error.setpos {
+        bottom: -17px;
+    }
+    .departmentpage .dept-row-add .form-error.setpos .dept-inside-input {
+        top: -23px;
+    }
+    .departmentpage .dept-col-add {
+        margin-top: 8px;
+        width: 100%;
+    }
+    .dept-col-button {
+        margin-top: 8px;
+        text-align: right;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .profile-input-margin > div > div:first-child,
+    .profileinputmargin > div > div:first-child {
+        margin-bottom: 20px;
+        margin-top: 5px;
+    }
+    .addinputmargin {
+        margin: 5px 0 15px;
+    }
+    .signIn-content-padding {
+        padding: 0 20px;
+    }
+    .signIn-content {
+        line-height: 28px;
+        margin-top: 20px;
+    }
+    .signIn-ul {
+        color: #fff;
+        margin-top: 20px;
+        padding-left: 15px;
+    }
+    .signIn-content-1 {
+        line-height: 21px;
+        margin-top: 25px;
+    }
+    .signIn-logo {
+        height: 85px;
+        margin-top: 41px;
+        text-align: center;
+    }
+    .signIn-box-padding {
+        padding: 35px 59px 44px 39px;
+    }
+    .signIn-button-margin {
+        margin-top: 35px;
+        text-align: center;
+    }
+    .signIn-from-padding {
+        margin-top: 30px;
+    }
+    .container-padding {
+        padding: 50px 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    md-pagination-wrapper {
+        width: 766px !important;
+    }
+    .signIn-content-header {
+        font-size: 18px;
+        height: auto;
+    }
+    .signIn-logo {
+        height: 55px;
+        margin-top: 20px;
+    }
+    .signIn-content {
+        font-size: 14px;
+        line-height: 21px;
+        margin-top: 5px;
+    }
+    .signIn-content-1 {
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 12px;
+    }
+    .signIn-box-padding {
+        padding: 35px 15px 60px;
+    }
+    .signIn-form-header {
+        font-size: 25px;
+        margin-top: 20px;
+        padding-left: 0;
+        text-align: center;
+    }
+    .signIn-from-padding {
+        padding-left: 15px !important;
+    }
+    .form-label {
+        font-size: 14px;
+    }
+    .login-link-margin {
+        margin-bottom: 15px !important;
+        margin-top: 10px;
+    }
+    .signIn-button-margin {
+        margin-top: 25px;
+        text-align: center;
+    }
+    .loginmodel.ngdialog-message {
+        overflow: hidden;
+        padding: 5px!important;
+    }
+    .loginmodel .dialog-header {
+        font-size: 20px;
+        height: auto;
+        margin-bottom: 15px;
+        margin-top: 25px;
+    }
+    .loginmodel .dialog-footer-link {
+        cursor: pointer;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+    .loginmodel .form-error.ng-scope {
+        display: block;
+        font-size: 12px;
+        padding-top: 10px;
+        text-align: right;
+        width: 100%;
+    }
+    .container-padding {
+        padding: 50px 15px 0;
+    }
+    #changePassword-confirm-dialog .modal-dialog.assign-model-size {
+        max-width: 100%;
+    }
+    
+    .ngdialog.ngdialog-theme-default.custommodal {
+  padding: 150px 0 0;
+}
+    
+  .ngdialog.ngdialog-theme-default.modalver {
+  padding-bottom: 0;
+  padding-top: 90px;
+}  
+    
+    
+}
+
+@media only screen and (max-width: 359px) {
+    .formpage .form-error {
+        overflow: hidden;
+        right: 18px;
+        text-align: right;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 200px;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .notification-in {
+        padding: 15px 220px 15px 15px;
+        position: relative;
+    }
+    .notification-in1 {
+        color: #777;
+        position: absolute;
+        right: 15px;
+        top: 17px;    float: none;
+    }
+}
+@media only screen and (max-width:767px) {
+    .notification-in1 {
+        display: block;
+        padding-top: 10px;  color: #777;    float: none;
+    }
+
+}
+/*==========change color=========*/
+.selected-col{color:#393939; }
+button[disabled], html input[disabled] {color: #6e7277;cursor: no-drop;}
+select:disabled{color: #6e7277;cursor: no-drop;}
+
+.bootstrap-select.btn-group.disabled, .bootstrap-select.btn-group > .disabled{color: #8a8e93}
+.form-inside-label {color: #555555}
+.job-level {color: #555555;  }
+.nurse-details {color: #555555  }
+.nurse-font-12 {color: #555555  }
+.nurse-font-10 {color: #555555  }
+/*.nurse-font-12 {color: #8a8e93  }*/
+/*.nurse-font-10 {color: #8a8e93  }*/
+
+.dept-col-body{color: #555555}
+.view-full-profile{color: #462b68}
+.view-document{color: #f5a623}
+.status-color{  color: #169d48;  }
+.status-color1{  color: #d72828;  }
+.status-color2{  color: #e6950f;  }
+
+
+/*=======date hint tooltip==========*/
+.tooltip-pos{
+    position: absolute;
+    top: 7px;
+    right: -35px;
+}
+.ssn-container{
+    text-align: left;
+    width: 38px;
+    margin-right: 0;
+    padding: 0;
+    position: relative;
+}
+.ssn-outer{
+    margin-top:0px;
+    margin-left: 15px;
+    float: left;
+}
+.ssn-tt{
+    display:block;
+    margin-top: 4px;
+}
+.ssn-icon{
+    width: 30px;
+    height: auto;
+}
+.tooltip-inner {
+    width: 200px;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    background-color: #462b68;
+    border-radius: 4px;
+}
+
+.tooltip.top .tooltip-arrow {
+    border-top-color: #594177;
+}

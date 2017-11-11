@@ -1,0 +1,32 @@
+<div>
+    <div class="selected-app-logo"><img ng-src="{{actionAccountData.image_url || 'app/image/icon.png'}}"></div>
+    <div class="selected-app-head">Select {{actionAccountData.name}} Account</div>
+    <label ng-repeat="account in accountList" class="action-row-selected" ng-class="editDisable?'inactivestyleTrigger':''">
+        <input type="radio" name="account" ng-click="changeAccount(account)" ng-model="accountSelected" value="{{account.app_auth_id}}" ng-disabled="editDisable">
+        <div class="account-label">{{actionAccountData.name}} Account #{{$index+1}}</div>
+    </label>
+    <div>
+        <button type="button" class="connect-account-btn" ng-click="connectAnAccountPopup()" ng-disabled="editDisable" ng-class="editDisable ? 'inactive-style':''">
+            <i class="fa fa-plus-circle plus-class" aria-hidden="true"></i>Connect an Account
+        </button>
+    </div>
+    <div class="continue-div-account">
+        <button type="button" class="continue-button-account" ng-disabled="disableBtton||editDisable" ng-class="disableBtton||editDisable ? 'inactive-style':''" 
+        ng-click="selectAccount()">Continue</button>
+    </div>
+</div>
+<script type="text/ng-template" id="select-role">
+      <div class="selected-app-logo"><img ng-src="{{actionAccountData.image_url || 'app/image/icon.png'}}"></div>
+      <div class="allow-bumble-text">Allow Bumbl to access {{actionAccountData.name}} Account?</div>
+      <div class="apikey-text">API Key <span class="key-required">(required)</div>
+    <form name="apikeyForm1" ng-submit="apikeyForm1.$valid && insertAppAuth(apikey)" novalidate="">
+        <div><input type="text" class="api-key-input" ng-model="apikey.apivalue" required></div>
+        <div class="invalid-api-err">{{authMsg}}</div>
+        <div ng-if="showDomainName">
+            <div class="apikey-text">Group ID/Domain Name <span class="key-required">(required)</div>
+            <div><input type="text" class="api-key-input" ng-model="apikey.domainvalue" required></div>
+        </div>
+        <div class="api-verification-div"><button type="submit" class="api-verification-btn" ng-disabled="apikeyForm1.$invalid" ng-class="apikeyForm1.$invalid ? 'inactive-style':''">Yes, Continue</button></div>
+        
+    </form>
+</script>

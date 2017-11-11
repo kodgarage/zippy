@@ -1,0 +1,23 @@
+<div class="test-padd">
+    <div class="selected-app-logo"><img ng-src="{{testDataa.image_url || 'app/image/icon.png'}}"></div>
+    <div class="selected-app-head">{{testDataa.name}}</div>
+    <div class="test-success"><i class="fa fa-check-circle" aria-hidden="true"></i> <b>Test Successful!</b></div>
+    <div class="test-content" ng-hide="editDisable">
+        Alright got it! You can <a href="javaScript:;" ng-click="showTaskData()" ng-disabled="editDisable" ng-class="editDisable ? 'inactivestyleTrigger':''">view your task status update</a> to make sure everything looks OK.<br>We'll use this as a sample for setting up the rest of your Workflow. 
+    </div>
+    <div ng-if="taskData" class="taskdata">   
+        <div class="task-border">
+            <div ng-repeat="(key, data) in triggerResponseObj" class="taskrepeat">
+                <span class="keyValue">{{key}}</span>:  <span class="DataValue">{{data==null?'NA':data}}</span>
+            </div>
+        </div>
+    </div>  
+   
+     <div ng-if="triggerReponseCount==0" class="taskdata">   
+        <div class="no-task-border">
+            <div>No Task To View!!</div>
+        </div>
+    </div>
+   <button class="re-test" ng-disabled="editDisable" ng-class="editDisable ? 'inactivestyleTrigger':''"  ng-show="onlyEdit" ng-click="testSuccessPage = !testSuccessPage"><i class="fa fa-undo"></i> Re-test {{testDataa.name}} to get another task status update</button>
+    <div class="test-success-btn layout-xs-row layout-align-xs-center-center" ><button class="re-test-btn" ui-sref="app.overview"  ng-disabled="editDisable" ng-class="editDisable ? 'inactive-style':''">Continue</button></div>
+</div> 

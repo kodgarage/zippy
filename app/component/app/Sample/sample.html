@@ -1,0 +1,16 @@
+<div>
+  <div class="selected-app-logo"><img ng-src="{{sampleDataa.image_url || 'app/image/icon.png'}}"></div>
+  <div class="selected-app-head">Test {{sampleDataa.name}}</div>
+  <div class="sample-border">
+    <!--<div ng-repeat="data in sampleData">
+      <div class="label-name"><label>{{data.name}}</label></div>
+      <div class="label-value" ng-bind-html="data.value"></div>
+    </div>-->
+    <div ng-repeat="data in sampleData" class="sample-data">
+      <span class="label-name text-capitalize"><label>{{data.name}}:</label></span>
+      <span class="label-value">{{data.value}}</span>
+    </div>
+  </div>
+  <div class="sample-div"><button class="smple-btn" ng-click="testAction()">Test & Continue</button></div>
+  <div class="workflow-error" ng-show="showError">{{WorkFlowErr}}</div>
+</div>

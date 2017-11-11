@@ -1,0 +1,78 @@
+<div class="setup-view-style">
+  <div class="selected-app-logo"><img ng-src="{{templateData.image_url || 'app/image/icon.png'}}"></div>
+  <div class="selected-app-head">Select {{templateData.name}} Account</div>
+  <!--<form name="CustomerDetails" role="form" novalidate="" class="form-signin" ng-submit="CustomerDetails.$valid&&updatecustomerdetails()">-->
+  <form name="templateDetails" id="setupTemplate" role="form" novalidate="" class="template-form" ng-submit="goToSampleData()">
+    <div class="form-group" ng-if="!(params.immutable==0||params.immutable==1)" ng-repeat="params in requestedParamsList track by $index">
+      <!--{{params.dropdownType}}-->
+      <div class="flabel">
+        <!--<img class="template-logo" ng-src="{{templateData.image_url || 'app/image/icon.png'}}">-->
+        <label class="text-capitalize">{{params.label ? params.label : params.name}}</label>
+        <span class="required-clr" ng-show="params.required"> (required)</span><span class="option-clr" ng-hide="params.required"> (optional)</span>
+      </div>
+      <div class="template-description">{{params.description}}</div>
+      <!--<div class="chanel" ng-if="params.dropdownType=='static'">-->
+       <div class="chanel">
+        <input ng-if="params.required&&params.type!='textarea'" class="template-input" type="text" name="name" ng-model="params.model"
+          required ng-change="onedit()" typeahead="state for state in states | filter:$viewValue" ng-trim="false" ng-click="getCursorPos($event,$index)"
+          ng-keyup="getCursorPos($event,$index)">
+
+        <input ng-if="!params.required&&params.type!='textarea'" class="template-input" type="text" name="name" ng-model="params.model"
+          ng-trim="false" ng-click="getCursorPos($event,$index)" ng-keyup="getCursorPos($event,$index)">
+        <textarea ng-if="params.type=='textarea'" id="txtArea" cols="50" class="teaxtarea-width" rows="5" ng-model="params.model"
+          ng-click="getCursorPos($event,$index)" ng-keyup="getCursorPos($event,$index)"></textarea>
+
+        <div class="dropup text-right" ng-hide="triggerCount==0">
+          <button class="dropdown-toggle add-field" type="button" id="{{'dropdownMenu'+$index}}" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Add Field +</button>
+          <ul class="dropdown-menu" aria-labelledby="{{'dropdownMenu'+$index}}">
+            <li ng-repeat="(key , value) in triggerResponseObj" class="liCls">
+              <div ng-click="addDropDowndata($parent.$index,key)" style="outline: none">{{key}} <span class="liValue">{{value}}</span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!--<div class="chanel" ng-if="params.dropdownType=='dynamic'">
+            <select class="form-control">
+                <option ng-repeat="(key , value) in triggerResponseObj" value="{{key}}">
+                    {{key}}<span class="value-trigger"> {{value}}</span>
+                </option>
+            </select>
+      </div>-->
+
+
+    </div>
+    <div class="setup-div"><button type="submit" id="btnSearch" class="setup-button" ng-disabled="templateDetails.$invalid" ng-class="templateDetails.$invalid ? 'inactive-style':''"> Continue</button></div>
+
+  </form>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $(window).keydown(function (event) {
+      if (event.keyCode == 13 && event.target.nodeName != 'TEXTAREA') {
+        event.preventDefault();
+        return false;
+      }
+    });
+  });
+
+</script>
+
+
+<!--<textarea ng-if="params.type=='textarea'" id="txtArea"  ng-textarea-enter="textareaAction($event)" style="white-space:pre;" class="teaxtarea-width" rows="5" ng-model="params.model" ng-trim="false" ng-click="getCursorPos($event,$index)" ng-keyup="getCursorPos($event,$index)"></textarea>-->
+<!--<select class="selectpicker" data-live-search="true" ng-model="addNotification.select1" ng-change="insertMessageTag()" id="smsSelect">-->
+<!--<div>-->
+
+<!--<option ng-repeat="(key , value) in triggerResponseObj" value="{{key}}">
+                    {{key}}<span class="value-trigger"> {{value}}</span>
+                </option>-->
+
+
+<!--<select id="droppDown" class="btn-heigth selectpicker" data-live-search="true" ng-model="params.dropDownModel" ng-hide="triggerCount==0"
+                            my-text ng-change="addDropDowndata($index,params.dropDownModel)">
+                            <option ng-repeat="(key , value) in triggerResponseObj" value="{{key}}">
+                                {{key}}
+                            </option>
+                            </select>-->

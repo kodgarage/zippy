@@ -1,0 +1,67 @@
+md-content {
+    background-color:#ffffff;
+    box-shadow: none;
+}
+md-tabs-canvas{
+    height: 55px !important;
+}
+md-pagination-wrapper{
+    height: 55px !important;
+}
+md-tabs-wrapper {
+    background-color: #f1f1f8 !important;
+}
+.md-tab.md-active {
+    background-color:#ffffff;
+}
+md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
+    color:#462b68;
+    background-color: #462b68;
+    height:5px;
+}
+.tabsdemoDynamicTabs md-content {
+    background-color: transparent !important; }
+.tabsdemoDynamicTabs md-content md-tabs {
+    border: 1px solid #e1e1e1; }
+.tabsdemoDynamicTabs md-content md-tabs md-tab-content {
+    background: #f6f6f6; }
+.tabsdemoDynamicTabs md-content md-tabs md-tabs-wrapper {
+    background: white; }
+.tabsdemoDynamicTabs md-content h1:first-child {
+    margin-top: 0; }
+
+.tabsdemoDynamicTabs md-input-container {
+    padding-bottom: 0; }
+
+.tabsdemoDynamicTabs .remove-tab {
+    margin-bottom: 40px; }
+
+.tabsdemoDynamicTabs .demo-tab > div > div {
+    padding: 25px;
+    box-sizing: border-box; }
+
+.tabsdemoDynamicTabs .edit-form input {
+    width: 100%; }
+
+.tabsdemoDynamicTabs md-tabs {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+
+.tabsdemoDynamicTabs md-tab[disabled] {
+    opacity: 0.5; }
+
+.tabsdemoDynamicTabs label {
+    text-align: left; }
+
+.tabsdemoDynamicTabs .long > input {
+    width: 264px; }
+
+.tabsdemoDynamicTabs .md-button.add-tab {
+    transform: translateY(5px); }
+
+md-tabs[md-border-bottom] md-tabs-wrapper {
+    box-shadow: -2px 4px 9px 0 rgba(143, 142, 162, 0.3);
+}
+
+md-tabs-wrapper.md-stretch-tabs md-pagination-wrapper md-tab-item{
+    text-transform: capitalize !important;
+}

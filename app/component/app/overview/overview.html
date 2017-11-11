@@ -1,0 +1,33 @@
+<div>
+    <div class="selected-app-logo"><img ng-src="{{overviewData.image_url || 'app/image/icon.png'}}"></div>
+    <div class="overview-content">
+        <div class="overview-head">Ready to turn on your Bumbl?</div>
+        <div overview-content>We recommend giving your Bumbl a name.</div>
+        <div><input type="text" class="overview-input" placeholder="Name your Bumbl..." ng-model="field.name"></div>
+        <div class="toggle-container tg-container">
+          <span class="toggle-label tg-label">Your Bumbl Is </span>
+          <span>  
+             <button class="onbtn" ng-show="isEnabled" ng-click="isEnabled = !isEnabled;updateStatus();">
+                <span class="dot-r"></span> <span style="margin-right: -32px;">ON</span> 
+            </button>
+              <button class="offbtn" ng-hide="isEnabled" ng-click="isEnabled = !isEnabled;updateStatus();">
+                <span style="margin-right:-30px;">OFF</span><span class="dot"></span>
+              </button>
+              
+            <!--<button class="onbtn" ng-hide="appItems.isEnabled" ng-click="appItems.isEnabled = !appItems.isEnabled;updateStatus(appItems);">
+              <span class="dot-r"></span>
+              <span style="margin-right: -32px;">ON</span>
+            </button>
+            <button class="offbtn" ng-show="appItems.isEnabled" ng-click="appItems.isEnabled = !appItems.isEnabled;updateStatus(appItems);"><span style="margin-right:-30px;">OFF</span><span
+              class="dot">
+            </button>-->
+          </span>
+        </div>
+        <div class="overview-msg">While ON, this Bumbl will run instantly when the {{accountDataInAction.name}} trigger happens.</div>
+        <div>
+          <button class="move-to-dashboard" ng-hide="editDisable" ng-click="updateTask()">Create</button>
+          <button class="move-to-dashboard" ng-show="editDisable" ng-click="updateTask()">Update</button>
+          <!--<button class="move-to-dashboard" ng-model="" ng-click="updateTask()">Update</button>-->
+          </div>
+    </div>
+</div>

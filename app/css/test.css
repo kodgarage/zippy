@@ -1,0 +1,168 @@
+.test-app-content {
+  font-size: 14px;
+  text-align: center;
+  color: #354052;
+  padding: 24px 0px;
+}
+
+.test-padd {
+  padding: 20px;
+}
+
+.make-sure-test {
+  font-size: 16px;
+  padding: 20px;
+  background-color: #fff6e1;
+  margin: 0 20px;
+  color: #d79500;
+}
+
+
+/*Success test*/
+
+.test-success {
+  font-size: 18px;
+  padding: 16px;
+  background-color: #62d493;
+  margin: 16px;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.test-content {
+  text-align: center;
+  color: #5F6C72;
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.re-test {
+  border-radius: 4px;
+  width: 50%;
+  font-size: 14px;
+  background-color: #eef0f2;
+  padding: 20px;
+  margin: 0 20px;
+  margin-top: 20px;
+}
+
+.test-success-btn {
+  text-align: right;
+}
+
+.login-test {
+  font-size: 16px;
+  padding: 20px;
+}
+
+.use-test {
+  font-size: 16px;
+  padding: 20px;
+}
+
+.webhook-input-padd {
+  padding: 20px;
+}
+
+.webhook-input {
+  height: 50px;
+  padding: 10px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  width: 100%;
+}
+
+.copy-clipboard {
+  height: 48px;
+  width: 150px;
+  background-color: #ff8433;
+  border: none;
+  font-size: 14px;
+  outline: none;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.ok-test-div {
+  text-align: right;
+}
+
+.ok-button-div {
+  background-color: #ff8433;
+  /*height: 20px;*/
+  width: 150px;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 18px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 500;
+  outline: 0;
+}
+
+.ok-button-div:hover :focus {
+  border: 1px solid #eee;
+}
+
+.re-test {
+  text-align: left;
+  color: #000;
+}
+
+.re-test-btn {
+  background-color: #ff8433;
+  /*height: 20px;*/
+  width: 150px;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 10px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 500;
+  outline: 0;
+}
+
+.task-status {
+  text-align: center;
+  padding-top: 50px;
+}
+
+
+/*view task status update*/
+
+.keyValue {
+  font-size: 17px;
+  color: #000;
+  font-weight: 500;
+}
+
+.taskdata {
+  /*margin: 70px 0 0 100px;*/
+}
+
+.taskrepeat {
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+.task-border {
+  border: 1px solid #A9A9A9;
+  margin: 20px 30px 20px 10px;
+}
+
+.no-task-border {
+  text-align: center;
+  font-size: 22px;
+}

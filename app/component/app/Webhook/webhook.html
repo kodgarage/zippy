@@ -1,0 +1,16 @@
+<div class="test-padd">
+    <div class="selected-app-logo"><img ng-src="{{webData.image_url || 'app/image/icon.png'}}"></div>
+    <div class="selected-app-head">Connect {{webData.name}}</div>
+    <div>
+        <div class="login-test">Log into your service and paste the below URL into the webhook setup field.</div>
+        <div class="use-test">Use this:</div>
+        <div class="webhook-input-padd layout-row layout-xs-column"> 
+            <div class="flex-60 flex-xs-100 pad-10"><input type="text" class="webhook-input" ng-model="webhook_namee" ng-disabled="editDisable" ng-class="editDisable?'inactivestyleTrigger':''"></div>
+            <div class="flex-40 layout-row layout-align-start-center pad-l-10 flex-xs-100 pad-10" ng-show="changeBtn"><button type="button" ngclipboard data-clipboard-text="{{webhook_namee}}" ng-click="changeBtn=!changeBtn" class="copy-clipboard" ng-disabled="editDisable" ng-class="editDisable ? 'inactive-style':''">Copy to clipboard</button></div>
+            <div class="flex-40 layout-row layout-align-start-center pad-l-10 flex-xs-100 pad-10" ng-hide="changeBtn"><button type="button" ng-click="changeBtn=!changeBtn" class="copy-clipboard" ng-disabled="editDisable" ng-class="editDisable ? 'inactive-style':''">Copied!</button></div>         
+        </div>
+    </div>  
+    <div class="ok-test-div pad-10 layout-xs-row layout-align-xs-center-center">
+        <button type="button" class="ok-button-div flex-xs-100" ng-click="goToTest()" ng-disabled="editDisable" ng-class="editDisable ? 'inactive-style':''">Continue</button>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+.sample-border{
+    border: 1px solid #DADFE2;
+    margin: 20px;
+    word-wrap: break-word;
+}
+.label-name{
+    color: #5F6C72;
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.label-value{
+    margin-left: 5px;
+    font-weight: 500;
+    font-size: 14px !important;
+}
+.sample-div{
+    text-align: right;
+}
+
+.smple-btn{
+    background-color: #ff8433;
+    /*height: 20px;*/
+    width: 200px;
+    border: none;
+    color: white;
+    padding: 10px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 18px 10px;
+    cursor: pointer;
+    /*border-radius: 4px;*/
+    font-weight: 600;
+    outline: 0;
+}
+
+.sample-data{
+    margin-top: 20px;    
+}

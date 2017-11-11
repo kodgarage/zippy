@@ -1,0 +1,236 @@
+<div class="layout-column overflow-h">
+  <div class="topbar layout-row layout-align-space-between-center flex-100">
+  <div class="topbar-left flex-50 layout-row layout-align-space-between-center">
+    <div class="layout-row layout-align-center-center">
+      <div class="toggle-button pull-left" ng-click="openLeftMenu()" id="toggleSideMenu">
+        <i class="fa fa-bars fa-lg toggle-bar" aria-hidden="true"></i>
+      </div>
+      <div class="layout-row">
+        <!--<span class="dashbrd-pointer hide-gt-xs" ui-sref="dashboard"><i class="material-icons">dashboard</i></span>-->
+        <span class="dashbrd-pointer" ui-sref="dashboard">Dashboard</span></div>
+         <!--<span class="">Task History</span></div>-->
+    </div>
+    <!--</div>-->
+
+
+    <!--<div class="topbar-center flex-33 layout-row layout-align-center-center flex-xs-45 flex-sm-45">-->
+    <div>
+      <a ui-sref="dashboard">
+        <img src="app/image/Logo_small.png" style="width: 40px;cursor:pointer"></a>
+    </div>
+  </div>
+  <div class="topbar-right flex-50 layout-row layout-align-end-center">
+    <!--<button class="make-workflow-btn" ui-sref="app.triggerapp"><i class="material-icons hide-gt-xs">add_circle</i><span class="hide-xs">Create A Bumbl</span></button>-->
+    <button class="make-workflow-btn" ng-click="goToTrigger()"><i class="material-icons hide-gt-xs">add_circle</i><span class="hide-xs">Create A Bumbl</span></button>
+    <div class="g-userprofile">
+      <div>
+        <div class="dropdown">
+          <button class="btn dropdown-toggle p-toogle-btn" type="button" data-toggle="dropdown" style="outline:none;"><i class="material-icons" style="color:#ffffff;">settings</i>
+              <!--<span class="caret"></span>-->
+              <!--<md-tooltip>Settings</md-tooltip>-->
+            </button>
+          <ul class="dropdown-menu">
+            <li style="height:42px;">
+              <a ui-sref="profile" class="p-anchor">
+                <i class="fa fa-user margin-r-16" aria-hidden="true"></i> Account
+              </a>
+            </li>
+            <li style="height:42px;"><a ng-click="logout()" class="p-anchor"><i class="fa fa-sign-out margin-r-16" aria-hidden="true"></i>Log out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Task History Header-->
+
+<div class="task-head layout-row layout-align-center-center">
+  <!--<div class="col-xs-4">
+    <div class="row task-head-his">Task History</div>
+  </div>-->
+  <!--<div class="col-xs-6" style="text-align:right;">-->
+    <!--<div></div>-->
+    <div class="row">
+      <div class="task-head-mid">
+        <div class="task-head-mid-in"> <img class="task-data-logo" ng-src="{{taskHistoryData.triggerAppImageUrl}}"> </div>
+        <div class="task-head-caret"><i class="fa fa-caret-right" aria-hidden="true"></i></div>
+        <div class="task-head-mid-in"> <img class="task-data-logo" ng-src="{{taskHistoryData.actionAppImageUrl}}"></div>
+      </div>
+      <div class="task-head-name">{{taskHistoryData.taskName}}</div>
+    </div>
+  <!--</div>-->
+  <!--<div class="col-xs-6">-->
+    <!--<div class="layout-row">
+      <div class="layout-row"><i class="fa fa-search search-icon" aria-hidden="true"></i><input type="text" ng-model="search" name="query" placeholder="Search…" class="search-box-input"></div> 
+    </div>-->
+     <!--<div><i class="fa fa-search search-icon" aria-hidden="true"></i></div>-->
+  </div>
+
+<!--</div>-->
+
+
+
+<!--<div class="task-heading">
+  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 task-history-tab">
+    Task History
+  </div>
+  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 layout-row logo-margin">
+    <div class="app-logo-style"> <img class="task-data-logo" ng-src="{{taskHistoryData.triggerAppImageUrl}}"> </div>
+      <i class="fa fa-caret-right custom-icon-filter" aria-hidden="true"></i>
+    <div class="app-logo-style"> <img class="task-data-logo" ng-src="{{taskHistoryData.actionAppImageUrl}}"></div>
+    <div>{{taskHistoryData.taskName}}</div>
+  </div>
+  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+    <div class="pull-right history-search">
+      <div class="search-box"><input type="text" value="" name="query" placeholder="Search…" class="text-input search-box__input"></div>
+    </div>
+  </div>
+</div>-->
+<!--<div>-->
+  <div>
+    <div class="layout-row layout-align-sm-end-center search-right layout-align-center-center">
+      <div class="search-input">
+        <i class="fa fa-search search-icon" aria-hidden="true"></i>
+        <!--</div>-->
+
+      <!--<div>-->
+        <input type="text" ng-model="search" name="query" placeholder="Search…" style="border:none;"></div>
+      </div> 
+  </div>
+<!--</div>-->
+<!--Task History Data-->
+<div class="container task-history-data">
+  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 tbody-scroll">
+    <div class="">
+      <table class="table check table-bordered table-text">
+        <thead>
+          <tr>
+            <th class="text-center">Task Id</th>
+            <th class="text-center">Created Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="data in taskHistory | filter:search" ng-click="showTaskDetails(data,$index)" class="task-pointer" ng-class="{sel: $index == selected}">
+            <!--<tr ng-repeat="data in taskHistory | filter:search" ng-click="showTaskDetails(data,$index)" class="task-pointer" ng-class="{sel: selected == 0}">-->
+            <td> {{data.taskLogId}}</td>
+            <td>{{data.createdAt |date: "MM/dd/yyyy h:mm:ss a"}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <div class="trigger-details">
+      <div class="trigger-logo-circle">
+        <div class="img-circle"><img class="task-data-logo" ng-src="{{taskHistoryData.triggerAppImageUrl}}"></div>
+      </div>
+      <div class="trigger-logo-line"></div>
+      <div class="task-section">
+        <div class="task-details-data">{{taskHistoryData.triggerDetails}}</div>
+        <div class="sub-details">
+          <span class="timestamp">{{taskData.createdAt |date: "MM/dd/yyyy h:mm:ss a"}}</span>
+          <span class="trigger-label">Trigger</span>
+        </div>
+        <div class="data-control">
+          <div class="data-pill-nav">
+            <div class="data-in" ng-disabled="triggerRequest==false" ng-class="triggerRequest==false?'trigger-request-disable':''" ng-click="triggerRequest && triggerToggle(0)">Request</div>
+            <div class="data-out" ng-disabled="triggerResponse==false" ng-class="triggerResponse==false?'trigger-request-disable':''"
+              ng-click="triggerResponse && triggerToggle(1)">Response</div>
+          </div>
+        </div>
+        <div ng-show="IsVisibleTriggerRequest" class="trigger-margin">
+          <div class="sample-details">
+            <div><input type="text" ng-model="searchTriggerRequest" name="query" placeholder="Search…" class="search-triggerdata-input"></div>
+            <div class="search-triggerdata-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
+          </div>
+          <div class="sample-details-table">
+            <!--<div ng-repeat="(key,value) in triggerRequest" class="sample-details-values">-->
+            <div ng-repeat="step3 in tmp3| filter:searchTriggerRequest" class="sample-details-values">
+              <span>{{step3.key}}:</span>
+              <span class="value-padding">{{step3.value}}</span>
+            </div>
+          </div>
+        </div>
+        <div ng-show="IsVisibleTriggerResponse" class="trigger-margin">
+          <div class="sample-details">
+            <div><input type="text" ng-model="searchTriggerResponse" name="query" placeholder="Search…" class="search-triggerdata-input"></div>
+            <div class="search-triggerdata-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
+          </div>
+          <div class="sample-details-table">
+            <!--<div ng-repeat="(key,value) in triggerResponse" class="sample-details-values">-->
+            <div ng-repeat="step4 in tmp4| filter:searchTriggerResponse" class="sample-details-values">  
+              <span>{{step4.key}}:</span>
+              <span class="value-padding">{{step4.value}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trigger-details">
+      <div class="trigger-logo-circle">
+        <div class="img-circle"><img class="task-data-logo" ng-src="{{taskHistoryData.actionAppImageUrl}}"></div>
+      </div>
+      <!--<div class="trigger-logo-line"></div>-->
+      <div class="task-section">
+        <div class="task-details-data">{{taskHistoryData.actionDetails}}</div>
+        <div class="sub-details">
+          <span class="timestamp">{{taskData.createdAt |date: "MM/dd/yyyy h:mm:ss a"}}</span>
+          <span class="trigger-label">Action</span>
+        </div>
+        <div class="data-control">
+          <div class="data-pill-nav">
+            <div class="data-in" ng-disabled="actionRequest==false" ng-class="actionRequest==false?'trigger-request-disable':''" ng-click="actionRequest && actionToggle(0)">Request</div>
+            <div class="data-out" ng-disabled="actionResponse==false" ng-class="actionResponse==false?'trigger-request-disable':''" ng-click="actionResponse && actionToggle(1)">Response</div>
+          </div>
+        </div>
+        <div ng-if="IsVisibleActionRequest" class="trigger-margin">
+          <div class="sample-details">
+            <div><input type="text" ng-model="searchActionRequest" name="query" placeholder="Search…" class="search-triggerdata-input"></div>
+            <div class="search-triggerdata-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
+          </div>
+          <div class="sample-details-table">
+            <!--<div ng-repeat="(key,value) in actionRequest |filter:searchActionRequest" class="sample-details-values">-->
+            <div ng-repeat="step in tmp| filter:searchActionRequest" class="sample-details-values">
+              <!--<div ng-repeat="(key,value) in step" class="sample-details-values">-->
+              <span>{{step.key}}:</span>
+              <span class="value-padding">{{step.value}}</span>
+            </div>
+          </div>
+          <!--</div>-->
+        </div>
+        <div ng-if="IsVisibleActionResponse" class="trigger-margin">
+          <div class="sample-details">
+            <div><input type="text" ng-model="searchActionResponse" name="query" placeholder="Search…" class="search-triggerdata-input"></div>
+            <div class="search-triggerdata-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
+          </div>
+          <div class="sample-details-table">
+            <!--<div ng-repeat="(key,value) in actionResponse" class="sample-details-values">-->
+            <div ng-repeat="step2 in tmp2| filter:searchActionResponse" class="sample-details-values">
+              <span>{{step2.key}}:</span>
+              <span class="value-padding">{{step2.value}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+<script>
+  $(document).ready(function () {
+    $(".data-pill-nav  > div").click(function () {
+      $(this).toggleClass("active");
+      $(this).siblings().removeClass("active");
+    });
+
+    $(".check").click(function () {
+      $(".data-pill-nav  > div").removeClass("active");
+    });
+  });
+</script>

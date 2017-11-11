@@ -1,0 +1,129 @@
+<div>
+  <!--<div class="topbar">
+    <div class="topbar-left"><span class="dashbrd-pointer" ui-sref="dashboard">Dashboard  </span>
+      <div class="toggle-button pull-left" ng-click="toggleSideMenu()"><i class="fa fa-bars fa-lg toggle-bar" aria-hidden="true"></i></div>
+    </div>
+    <div class="topbar-center">
+      <a ui-sref="dashboard" ui-sref="dashboard"><img src="app/image/Logo_small.png" style="width: 40px;cursor:pointer"></a>
+    </div>
+  </div>-->
+  <div class="topbar layout-row layout-align-space-between-center flex-100">
+    <div class="topbar-left flex-50 layout-row layout-align-space-between-center">
+      <div class="layout-row layout-align-center-center">
+        <div class="toggle-button pull-left" ng-click="toggleSideMenu()" id="toggleSideMenu">
+          <i class="fa fa-bars fa-lg toggle-bar" aria-hidden="true"></i>
+        </div>
+        <div class="layout-row">
+          <!--<span class="dashbrd-pointer hide-gt-xs" ui-sref="dashboard"><i class="material-icons">dashboard</i></span>-->
+          <span class="dashbrd-pointer" ui-sref="dashboard">Dashboard</span></div>
+      </div>
+      <!--</div>-->
+
+
+      <!--<div class="topbar-center flex-33 layout-row layout-align-center-center flex-xs-45 flex-sm-45">-->
+      <div>
+        <a ui-sref="dashboard">
+        <img src="app/image/Logo_small.png" style="width: 40px;cursor:pointer"></a>
+      </div>
+    </div>
+
+
+    <div class="topbar-right flex-50 layout-row layout-align-end-center">
+      <!--<div ng-show="editShow" class="edit-show">
+        <span class="bumble-toggle-label">YOUR BUMBLE IS</span>
+        <span>
+          <button class="onbtn" ng-show="isEnabled" ng-click="isEnabled = !isEnabled;updateStatus();">
+          <span class="dot-r"></span> <span style="margin-right: -32px;">ON</span> 
+        </button>
+        </span>
+        <span>
+          <button class="offbtn" ng-hide="isEnabled" ng-click="isEnabled = !isEnabled;updateStatus();">
+            <span style="margin-right:-30px;">OFF</span><span class="dot"></span>
+          </button>
+        </span>
+      </div>-->
+
+      <!--<button class="onbtn" ng-show="appItems.isEnabled" ng-click="appItems.isEnabled = !appItems.isEnabled;updateStatus(appItems);">
+         <span class="dot-r"></span> <span style="margin-right: -32px;">ON</span> 
+      </button>-->
+      <!--<button class="make-workflow-btn" ui-sref="app.triggerapp"><i class="material-icons hide-gt-xs">add_circle</i><span class="hide-xs">Create A Bumbl</span></button>-->
+      <!--<div class="g-userprofile">
+        <div>
+          <div class="dropdown">
+            <button class="btn dropdown-toggle p-toogle-btn" type="button" data-toggle="dropdown" style="outline:none;"><i class="material-icons" style="color:#ffffff;">settings</i>
+            </button>
+            <ul class="dropdown-menu">
+              <li style="height:42px;"><a ui-sref="profile" class="p-anchor"><i class="fa fa-user margin-r-16" aria-hidden="true"></i>Account</a></li>
+              <li style="height:42px;"><a ng-click="logout()" class="p-anchor"><i class="fa fa-sign-out margin-r-16" aria-hidden="true"></i>Log out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>-->
+    </div>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="leftfull"> </div>
+    <md-sidenav md-component-id="left" class="md-sidenav-left" md-is-locked-open="$mdMedia('min-width: 1024px')" style="width:100%">
+      <div class="sidebar">
+        <div class="detail-logo-container">
+          <div class="detail-info">
+            <div class="navset">
+              <div class="outer-circle">
+                <div class="inner-circle">
+                  <div class="logo-image"><img ng-src="{{progressLogo}}" class="progress-logo"></div>
+                </div>
+              </div>
+              <div class="nav-line"> </div>
+              <div class="navsec">
+                <div class="subscription">
+                  <span class="trigger">Trigger</span>
+                </div>
+                <div class="description">
+                  <span class="step-label" data-toggle="collapse" data-target="#demo"><a href="javascript:;" class="setup">1. Set up this step<i class="fa fa-caret-down left-carret" aria-hidden="true"></i></a></span>
+                </div>
+                <div id="demo" class="collapse innersec in">
+                  <div class="inner-menu">
+                    <a ng-class="{'sidebar-active': (!menu.isDisabled && $state.$current.name == menu.link),'no-disable-menu':(!menu.isDisabled),'disable-menu':(menu.isDisabled)}"
+                      class="sub-step-link" ng-repeat="menu in trigger" ng-click="changeState(menu,index)" ng-show="menu.isShow"> <img ng-src="{{menu.icon}}" class="left-paddng"/>{{menu.text}}</a>
+                    <!--<a class="sub-step-link" ng-repeat="menu in trigger" ng-click="changeState(menu,index)"> <img ng-src="{{menu.icon}}" class="left-paddng"/>{{menu.text}}</a>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="navset">
+              <div class="outer-circle">
+                <div class="inner-circle">
+                  <div class="logo-image"><img src="{{progressLogoAction}}" class="progress-logo"></div>
+                </div>
+              </div>
+              <div class="navsec">
+                <div class="subscription">
+                  <span class="trigger">Action</span>
+                </div>
+                <div class="description">
+                  <span class="step-label" data-toggle="collapse" data-target="#demo1"><a href="javascript:;" class="setup">2. Set up this step<i class="fa fa-caret-down left-carret" aria-hidden="true"></i></a></span>
+                </div>
+                <div id="demo1" class="collapse innersec in">
+                  <div class="inner-menu">
+                    <a ng-class="{'sidebar-active': (!items.isDisabled && $state.$current.name == items.link),'no-disable-menu':(!items.isDisabled),'disable-menu':(items.isDisabled)}"
+                      class="sub-step-link" ng-repeat="items in action" ng-click="changeActionState(items,index)"> <img ng-src="{{items.icon}}" class="left-paddng"/>{{items.text}}</a>
+                  </div>
+                </div>
+                <div class="nav-line2"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </md-sidenav>
+    <div class="content-main flex">
+      <md-card class="content">
+        <div ui-view="" autoscroll="false"></div>
+      </md-card>
+    </div>
+  </div>
+
+
+</div>

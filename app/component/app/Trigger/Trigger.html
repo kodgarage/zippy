@@ -1,0 +1,18 @@
+<div>
+    <div class="trigger-app-logo"><img src="{{triggerData.image_url || 'app/image/icon.png'}}"></div>
+    <div class="trigger-content-head">Select {{triggerData.name}} Trigger</div>
+    <!--<label class="radio-label">-->
+        <label class="action-row-selected"  ng-repeat="trigger in triggerList" ng-class="editDisable?'inactivestyleTrigger':''">       
+            <div class="column onetenth">
+                <input type="radio" name="trigger" ng-click="changeTrigger(trigger)" ng-model="triggerSelected" value="{{trigger.name}}" ng-disabled="editDisable">
+            </div>
+            <div class="column ninetenths">
+                <div class="action-namee">{{trigger.name}}</div>
+                <div class="help-text">{{trigger.details}}.</div>
+            </div>
+        </label>
+    <!--</label>-->
+    <div class="continue-div-trigger" >
+        <button type="button" class="continue-button-trigger" ng-disabled="disableBtton || editDisable" ng-class="disableBtton || editDisable ? 'inactive-style':''" ng-click="selectTrigger()">Save & Continue</button>
+    </div>
+</div>

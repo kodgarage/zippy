@@ -1,0 +1,60 @@
+<div class="layout-row layout-align-center-center signup-style" ng-controller="signupController">
+     <!-- <div class="card-signup layout-column layout-align-center-center">
+        <div class="n-login-style">
+        <img src="app/image/logo.png" class="logo-image-style"/>
+        <input class="signup-input" ng-model="user_name" type="text" placeholder="User Name" ng-change="checkUserRegister();">
+        <div ng-cloak style="color:red;font-size:18px">{{userGreetingMessage}}</div>
+       
+        <input class="signup-input" ng-model="signup_email" type="email" placeholder="Email" ng-change="checkUserEmail();">
+        <div ng-cloak style="color:red;font-size:18px;">{{emailGreetingMessage}}</div>
+        <input class="signup-input" ng-model="signup_password" type="password" placeholder="Password">
+        <button class="signup-submit-btn" type="submit" ng-click="signupRegister()">Sign Up</button>
+        <div ng-cloak style="color:#14c528;text-align:center;font-size:18px">{{greetingMessage}}</div>
+        <div style="color:#d8d8d8;font-family: Helvetica;text-align:center;">Already have an account? <a ui-sref="page.login" style="color:#f29b20;cursor:pointer;">Log in</a></div>
+    </div>
+    </div>  -->
+<div class="card-signup layout-column layout-align-center-center">
+    <div class="n-login-style">
+      <img src="app/image/logo.png" class="logo-image-style" />
+      <form name="testlogin1" role="form" novalidate="" class="" ng-submit="testlogin1.$valid && signupRegister()">
+        <input class="signup-input" ng-model="user_name" type="text" placeholder="User Name" ng-change="checkUserRegister();">
+        <div ng-cloak style="color:red;font-size:18px">{{userGreetingMessage}}</div>
+        <input class="signup-input" type="email" placeholder="Email" ng-model="signup_email" name="email" required ng-pattern="emailRegex"
+          ng-class="(testlogin1.email.$touched ||
+                                        testlogin1.$submitted ||
+                                        testlogin1.email.$dirty)
+                                        &&testlogin1.email.$invalid ? 'errorborder' : ''">
+        <div class="formerror" ng-if="testlogin1.$submitted ||
+                                        testlogin1.email.$touched ||
+                                        testlogin1.email.$dirty">
+          <div class="warning" ng-show="testlogin1.email.$error.required">Please enter email.</div>
+          <div class="warning" ng-show="testlogin1.email.$error.pattern"> Please enter a valid email address.</div>
+        </div>
+        <!--<div ng-cloak style="color:red;">{{emailGreetingMessage}}</div>-->
+        <input class="signup-input" type="password" placeholder="Password" ng-model="signup_password" name="password" required ng-class="(testlogin1.password.$touched ||
+                                        testlogin1.$submitted ||
+                                        testlogin1.password.$dirty)
+                                        &&testlogin1.password.$invalid ? 'errorborder' : ''">
+        <div class="formerror" ng-if="testlogin1.$submitted ||
+                                        testlogin1.password.$touched ||
+                                        testlogin1.password.$dirty">
+          <div class="warning" ng-show="testlogin1.password.$error.required">Please enter password.</div>
+        </div>
+        <div class="error-msg">{{authMsg}}</div>
+        <!-- <div><a  ui-sref="forgetpassword" style="color:#d8d8d8;font-family: Helvetica;cursor:pointer;padding-left:5px;">Forgot password?</a></div> -->
+        <button class="signup-submit-btn" type="submit">Sign Up</button>
+        <div ng-cloak style="color:#42D056">{{greetingMessage}}</div>
+        <div style="color:#d8d8d8;font-family: Helvetica;text-align:center;">Already have an account? <a ui-sref="page.login" style="color:#f29b20;cursor:pointer;">Log in</a></div>
+      </form>
+    </div>
+  </div>
+    <div class="side-signup hide-sm hide-xs">
+        <div class="side-signup-top"></div>
+        <div class="side-signup-main layout-row layout-align-center-center">
+            <img src="app/image/graphic.png" style="height:100%;">
+        </div>
+        <div class="signup-side-footer">
+            <img src="app/image/bottom-pic.png">
+        </div>
+    </div>
+</div>

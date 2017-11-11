@@ -1,0 +1,188 @@
+<div class="profile-section">
+  <!--<div class="topbar layout-row layout-align-space-between-center">
+    <div class="topbar-left"><span class="dashbrd-pointer" ui-sref="dashboard">Dashboard  </span>
+      <div class="toggle-button pull-left" ng-click="openLeftMenu()" id="toggleSideMenu"> <i class="fa fa-bars fa-lg toggle-bar" aria-hidden="true"></i> </div>
+    </div>
+    <div class="topbar-center" ui-sref="dashboard"> <img src="app/image/Logo_small.png" style="width: 40px;cursor:pointer"></div>
+     <div>
+          <div class="dropdown">
+            <button class="btn dropdown-toggle p-toogle-btn" type="button" data-toggle="dropdown" style="outline:none;"><i class="material-icons" style="color:#ffffff;">settings</i>
+             
+            </button>
+            <ul class="dropdown-menu">
+              <li style="height:42px;"><a ng-click="getProfile()" class="p-anchor"><i class="fa fa-user margin-r-16" aria-hidden="true"></i>Account</a></li>
+              <li style="height:42px;"><a ng-click="logout()" class="p-anchor"><i class="fa fa-sign-out margin-r-16" aria-hidden="true"></i>Log out</a></li>
+            </ul>
+          </div>
+        </div>
+  </div>-->
+  <div class="topbar layout-row layout-align-space-between-center flex-100">
+    <div class="topbar-left flex-50 layout-row layout-align-space-between-center">
+      <div class="layout-row layout-align-center-center">
+        <div class="toggle-button pull-left" ng-click="openLeftMenu()" id="toggleSideMenu">
+        <i class="fa fa-bars fa-lg toggle-bar" aria-hidden="true"></i>
+      </div>
+      <div class="layout-row">
+        <!--<span class="dashbrd-pointer hide-gt-xs" ui-sref="dashboard"><i class="material-icons">dashboard</i></span>-->
+      <span class="dashbrd-pointer" ui-sref="dashboard">Dashboard</span></div>
+      </div>
+    <!--</div>-->
+
+
+    <!--<div class="topbar-center flex-33 layout-row layout-align-center-center flex-xs-45 flex-sm-45">-->
+      <div>
+        <a ui-sref="dashboard">
+        <img src="app/image/Logo_small.png" style="width: 40px;cursor:pointer"></a>
+      </div>
+    </div>
+
+
+    <div class="topbar-right flex-50 layout-row layout-align-end-center">
+      <button class="make-workflow-btn" ui-sref="app.triggerapp"><i class="material-icons hide-gt-xs">add_circle</i><span class="hide-xs">Create A Bumbl</span></button>
+      <div class="g-userprofile">
+        <div>
+          <div class="dropdown">
+            <button class="btn dropdown-toggle p-toogle-btn" type="button" data-toggle="dropdown" style="outline:none;"><i class="material-icons" style="color:#ffffff;">settings</i>
+              <!--<span class="caret"></span>-->
+              <!--<md-tooltip>Settings</md-tooltip>-->
+            </button>
+            <ul class="dropdown-menu">
+              <li style="height:42px;"><a ng-click="getProfile()" class="p-anchor"><i class="fa fa-user margin-r-16" aria-hidden="true"></i>Account</a></li>
+              <li style="height:42px;"><a ng-click="logout()" class="p-anchor"><i class="fa fa-sign-out margin-r-16" aria-hidden="true"></i>Log out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--<ng-include src="'../app/global-toolbar/toolbar.html'"></ng-include>-->
+  <div class="profile-main-view layout-row" id="profile-main-view">
+    <!--<div class="profile-left-sidenav" id="profile-left-sidenav">
+      <div>
+        <h4 style="padding:8px 16px;"><i class="fa fa-sliders" aria-hidden="true" style="margin-right:12px;"></i>Account Setup</h4>
+      </div>
+      <div class="p-items" ng-class="activeProfileSection ? 'active-section':''" ng-click="showProfile();">Profile</div>
+      <div class="p-items" ng-class="activeBilingSection ? 'active-section':''" ng-click="showBiling()">Usages and Billing</div>
+    </div>-->
+    <md-sidenav md-component-id="left" class="md-sidenav-left new-style-sidenav" md-is-locked-open="$mdMedia('min-width: 1024px')">
+      <div class="profile-left-sidenav" id="profile-left-sidenav">
+        <div>
+          <h4 style="padding:8px 16px;"><i class="fa fa-sliders" aria-hidden="true" style="margin-right:12px;"></i>ACCOUNT SETUP</h4>
+        </div>
+        <div class="p-items" ng-class="activeProfileSection ? 'active-section':''" ng-click="showProfile();">Profile</div>
+        <div class="p-items" ng-class="activeBilingSection ? 'active-section':''" ng-click="showBiling()">Usage</div>
+      </div>
+    </md-sidenav>
+
+    <div class="profile-right-section">
+      <!--<div style="font-size:20px">Account Information</div>-->
+      <div class="section-view">
+        <div ng-show="activeProfileSection">
+          <h4>PROFILE</h4>
+          <div class="layout-row text-capitalize">
+            <h4>User Name- {{profile.user_name}}</h4>
+          </div>
+          <div class="layout-row">
+            <h4>Email- {{profile.email}}</h4>
+          </div>
+        </div>
+
+        <!--Change Password-->
+        <div class="p-changepassword-section" ng-show="activeProfileSection">
+          <h4>CHANGE PASSWORD</h4>
+          <div class="layout-row layout-wrap layout-align-space-between-center">
+            <div class="layout-column name-section">
+              <span class="pad-td-8">Current Password</span>
+              <input type="password" ng-model="oldPassword">
+            </div>
+            <div class="layout-column name-section"><span class="pad-td-8">New Password</span><input type="password" ng-model="newPassword"></div>
+            <div class="layout-column name-section"><span class="pad-td-8">Confirm Password</span><input type="password" ng-model="confirmPassword"></div>
+          </div>
+          <div ng-cloak style="padding:16px 0px;color:red">{{message}}</div>
+          <div class="p-btn-update"><button class="update-btn-p" ng-click="changePassword()">Update</button></div>
+        </div>
+
+        <div class="layout-column" ng-show="activeBilingSection">
+          <h4>USAGE</h4>
+          <div style="max-width:400px;">
+            <div class="layout-row layout-align-space-between-center">
+              <div>Tasks</div>
+              <div style="margin-left: 10px;">{{profile.userTasks}}/{{profile.planData.tasks}}</div>
+            </div>
+            <div class="layout-row" style="line-height:40px">
+              <div class="p-progressbar">
+                <div class="p-progress" ng-style="taskStyle"></div>
+              </div>
+            </div>
+          </div>
+          <!--<div class="layout-row layout-align-space-between-center" style="max-width:400px">
+            <div>Bumbl</div>
+
+              <div>{{profile.userWorkflows}}/unlimited</div>
+          </div>-->
+          <div style="font-size: 18px;margin-top: 16px;">PRICING</div>
+        </div>
+
+        <!--pricing data ui-->
+        <div class="layout-row layout-align-center-center layout-wrap" ng-show="activeBilingSection">
+          <div class="p-price-card" ng-repeat="data in pricingData | filter: { plan_id: 1 }">
+            <div class="layout-row layout-align-center-center h-style">{{data.name}}</div>
+            <div class="layout-row layout-align-center-center"><span style="font-size:18px;"><sup>$</sup></span><span class="p-price-value">{{data.price}}</span><span style="font-size:18px;"><sup>USD</sup></span>
+            </div>
+            <div class="layout-row layout-align-center-center margin-mt-16" style="border-bottom: 1px solid #e5e5e5;"> <span>{{data.description}}</span> </div>
+            <div class="pad-16">
+              <div class="layout-row layout-align-space-between-center">
+                <label>Tasks  </label><span>{{data.tasks}}</span>
+              </div>
+              <div class="layout-row layout-align-space-between-center">
+                <label>Premium Apps  </label><span ng-show="data.premium_apps == 0">Yes</span><span ng-show="data.premium_apps == 1"></span>
+              </div>
+              <div class="layout-row layout-align-space-between-center">
+                <label>Bumbl Interval  </label><span>{{data.polling}}</span>
+              </div>
+            </div>
+            <div class="layout-row layout-align-center-center">
+              <button class="p-button" style="background-color:#42D056" ng-show="data.plan_id === profile.plan_id" ng-disabled="true">ACTIVE</button>
+              <button class="p-button" style="background-color:#ff8433" ng-hide="data.plan_id === profile.plan_id" ng-disabled="true">UPGRADE</button>
+            </div>
+          </div>
+          <div class="p-price-card" ng-repeat="data in pricingData | filter: { plan_id: 2 }">
+            <div class="layout-row layout-align-center-center h-style">{{data.name}}</div>
+            <div>
+              <div class="layout-row layout-align-center-center"><span style="font-size:18px;"><sup>$</sup></span><span class="p-price-value">{{data.price}}</span>
+                <span style="font-size:18px;"><sup>USD</sup>
+                           </span>
+              </div>
+              <div class="layout-row layout-align-center-center margin-mt-16" style="border-bottom: 1px solid #e5e5e5;"> <span>{{data.description}}</span> </div>
+            </div>
+            <div class="pad-16">
+              <div class="layout-row layout-align-space-between-center">
+                <label>Tasks</label>
+                <span>{{data.tasks}}</span>
+              </div>
+              <div class="layout-row layout-align-space-between-center">
+                <label>Premium Apps  </label><span ng-show="data.premium_apps == 0">No</span><span ng-show="data.premium_apps == 1">YES</span>
+              </div>
+              <div class="layout-row layout-align-space-between-center">
+                <label>Bumbl Interval </label><span>{{data.polling}}</span>
+              </div>
+            </div>
+            <div class="layout-row layout-align-center-center">
+              <button class="p-button" style="background-color:#42D056" ng-show="data.plan_id === profile.plan_id" ng-disabled="true">ACTIVE</button>
+              <button class="p-button" style="background-color:#ff8433" ng-hide="data.plan_id === profile.plan_id" ng-disabled="true">UPGRADE</button>
+            </div>
+          </div>
+          <div class="p-price-card" ng-repeat="data in pricingData | filter: { plan_id: 3 }">
+            <div class="layout-row layout-align-center-center h-style">{{data.name}}.</div>
+            <div class="layout-row layout-align-center-center margin-mt-16" style="border-bottom: 1px solid #e5e5e5;height:90px"> <span style="font-size: 2em;font-weight: 600;">Contact Us</span> </div>
+            <div class="pad-16 p-pro">
+              <p class="pad-l-16" style="font-weight:100;text-align:center">{{data.description}}</p>
+            </div>
+            <div class="layout-row layout-align-center-center"><button class="p-button" style="background-color:#ff8433"><a style="outline:none;text-decoration:none;color:#ffffff;" href="mailto:contact@bumbl.it">CONTACT US</a></button></div>
+          </div>
+        </div>
+        <!--end of pricing data ui-->
+      </div>
+    </div>
+  </div>
+</div>

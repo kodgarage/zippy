@@ -1,0 +1,44 @@
+/*===========notification page===========*/
+.notification-header{
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #462b68;
+}
+.notification-box{
+    margin-top: 30px;
+    background-color: #ffffff;
+    box-shadow: -2px 4px 9px 0 rgba(143, 142, 162, 0.3);
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #462b68;
+}
+.notification-in{  padding: 15px;  }
+.notification-in1{color: #adb1b8;float: right}
+
+.pending-profile{
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.68;
+    letter-spacing: 0.4px;
+    text-align: center;
+    color: #2e1a47;
+}
+.pending-profile-a{
+    text-decoration: none;
+    color: #2e1a47;
+}
+.pending-profile-a:hover, .pending-profile-a:active, .pending-profile-a:visited{
+    text-decoration: none;
+    color: #2e1a47;
+}

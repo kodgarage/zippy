@@ -1,0 +1,78 @@
+/*pagination css*/
+@media only screen  and (min-width: 1100px) {
+    .pagination-right {
+        display: inline-block;
+        text-align: right;
+        width: 80%;
+    }
+    .page-sec {
+        clear: both;
+    }
+    .total-result.pagination-left {
+        display: inline-block;
+        vertical-align: middle;
+        width: 19%;
+    }
+    .total-result.ng-binding {
+        display: inline-block;
+    }
+    .custompagination {
+        display: inline-block;
+        margin-left: 10px;
+        vertical-align: middle;
+    }
+}
+@media only screen  and (max-width: 1099px) {
+    .page-sec {
+        clear: both;
+    }
+    .total-result.pagination-left {
+        display: inline-block;
+        vertical-align: middle;
+        width: 39%;
+    }
+    .total-result.ng-binding {
+        display: inline-block;
+    }
+    .custompagination {
+        display: inline-block;
+        margin-left: 10px;
+        vertical-align: middle;
+    }
+    .pagination-right {
+        display: inline-block;
+        text-align: right;
+        width: 100%;
+    }
+}
+@media only screen  and (max-width: 767px) {
+    .page-sec {
+        clear: both;
+        text-align: center;
+    }
+    .total-result.pagination-left {
+        display:block;
+        width: 100%;
+    }
+    .pagination-right {
+        display: block;
+        text-align: center; margin-top: 15px;
+    }
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span{
+    width: 30px;
+    height: 30px;
+    border-radius: 2px !important;
+    background-color: #337ab7;
+    border: none;
+    color: #ffffff !important;
+    font-size: 12px;
+}
+.pagination>li>a:focus, .pagination>li>a, .pagination>li>span:focus, .pagination>li>span{
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    color: #707070 !important;
+    font-size: 12px;
+}

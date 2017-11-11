@@ -1,0 +1,96 @@
+<!--<div class="login-page layout-row">
+    <div class="container center_div layout-row">
+    <div class="loginformm card layout-column layout-align-center-center">
+      <div class="row">
+        <img src="app/image/logo123.png"/>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+          <form name="testlogin1" role="form" novalidate="" class="form-signin"
+                ng-submit="testlogin1.$valid && login(account)">
+
+            <div class="">
+              <input class="signup-input" type="email" placeholder="Email" ng-model="account.email" name="email"
+                     required
+                     ng-pattern="emailRegex" ng-class="(testlogin1.email.$touched ||
+                                        testlogin1.$submitted ||
+                                        testlogin1.email.$dirty)
+                                        &&testlogin1.email.$invalid ? 'errorborder' : ''">
+              <div class="formerror" ng-if="testlogin1.$submitted ||
+                                        testlogin1.email.$touched ||
+                                        testlogin1.email.$dirty">
+                <div class="warning" ng-show="testlogin1.email.$error.required">Please enter email.</div>
+                <div class="warning" ng-show="testlogin1.email.$error.pattern"> Please enter a valid email address.</div>
+              </div>
+            </div>
+            <div class="">
+              <input class="signup-input" type="password" placeholder="Password" ng-model="account.password"
+                     name="password" required ng-class="(testlogin1.password.$touched ||
+                                        testlogin1.$submitted ||
+                                        testlogin1.password.$dirty)
+                                        &&testlogin1.password.$invalid ? 'errorborder' : ''">
+              <div class="formerror" ng-if="testlogin1.$submitted ||
+                                        testlogin1.password.$touched ||
+                                        testlogin1.password.$dirty">
+                <div class="warning" ng-show="testlogin1.password.$error.required">Please enter Password.</div>
+              </div>
+            </div>
+            <div class="error-msg">{{authMsg}}</div>
+            <button type="submit" class="signup-submit-btn">Login</button>
+            <div style="text-align:center;margin:16px 0px;">Don’t have a Bumbl account yet? <a  ui-sref="signup">Sign up!</a></div>
+            <div style="text-align:center;margin:16px 0px;"><a ui-sref="forgetpassword">Forgot password?</a></div>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+<div class="layout-row layout-align-center-center signup-style" ng-controller="signupController">
+  <div class="card-signup layout-column layout-align-center-center">
+    <div class="n-login-style">
+      <img src="app/image/logo.png" class="logo-image-style" />
+      <form name="testlogin1" role="form" novalidate="" class="" ng-submit="testlogin1.$valid && login(account)">
+        <input class="signup-input" type="email" placeholder="Email" ng-model="account.email" name="email" required ng-pattern="emailRegex"
+          ng-class="(testlogin1.email.$touched ||
+                                        testlogin1.$submitted ||
+                                        testlogin1.email.$dirty)
+                                        &&testlogin1.email.$invalid ? 'errorborder' : ''">
+        <div class="formerror" ng-if="testlogin1.$submitted ||
+                                        testlogin1.email.$touched ||
+                                        testlogin1.email.$dirty">
+          <div class="warning" ng-show="testlogin1.email.$error.required">Please enter email.</div>
+          <div class="warning" ng-show="testlogin1.email.$error.pattern"> Please enter a valid email address.</div>
+        </div>
+        <!--<div ng-cloak style="color:red;">{{emailGreetingMessage}}</div>-->
+        <input class="signup-input" type="password" placeholder="Password" ng-model="account.password" name="password" required ng-class="(testlogin1.password.$touched ||
+                                        testlogin1.$submitted ||
+                                        testlogin1.password.$dirty)
+                                        &&testlogin1.password.$invalid ? 'errorborder' : ''">
+        <div class="formerror" ng-if="testlogin1.$submitted ||
+                                        testlogin1.password.$touched ||
+                                        testlogin1.password.$dirty">
+          <div class="warning" ng-show="testlogin1.password.$error.required">Please enter password.</div>
+        </div>
+        <div class="error-msg">{{authMsg}}</div>
+        <div><a  ui-sref="forgetpassword" style="color:#d8d8d8;font-family: Helvetica;cursor:pointer;padding-left:5px;">Forgot password?</a></div>
+        <button class="signup-submit-btn" type="submit">LOG IN</button>
+        <div ng-cloak style="color:#42D056">{{greetingMessage}}</div>
+        <div style="color:#d8d8d8;font-family: Helvetica;text-align:center;">Don`t have a Bumbl account yet? <a ui-sref="signup" style="color:#f29b20;cursor:pointer;">Sign up</a></div>
+      </form>
+    </div>
+  </div>
+  <div class="side-signup hide-sm hide-xs">
+    <div class="side-signup-top"></div>
+    <div class="side-signup-main layout-row layout-align-center-center">
+      <img src="app/image/graphic.png" style="height:100%;">
+    </div>
+    <div class="signup-side-footer">
+      <img src="app/image/bottom-pic.png">
+    </div>
+  </div>
+</div>

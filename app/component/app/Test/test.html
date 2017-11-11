@@ -1,0 +1,53 @@
+<div class="test-padd" ng-hide="testSuccessPage||showSuccessScreen">
+    <div class="selected-app-logo"><img ng-src="{{testDataa.image_url || 'app/image/icon.png'}}"></div>
+    <div class="selected-app-head">Test {{testDataa.name}}</div>
+    <div class="test-app-content">Test your {{testDataa.name}} trigger by sending us a task status update.</div>
+    <div class="make-sure-test"><i class="fa fa-check-circle" aria-hidden="true"></i> Make sure you've followed the setup instructions below.</div>
+    <div>
+        <div class="login-test">Log into your service and paste the below URL into the webhook setup field.</div>
+        <div class="use-test">Use this:</div>
+        <div class="webhook-input-padd layout-row layout-xs-column"> 
+            <div class="flex-60 flex-xs-100 pad-10"><input type="text" class="webhook-input" ng-model="webhookUrlData"></div>
+            <div class="flex-40 layout-row layout-align-start-center pad-l-10 flex-xs-100 pad-10" ng-show="changeBtn"><button type="button" ngclipboard data-clipboard-text="{{webhookUrlData}}" ng-click="changeBtn=!changeBtn" class="copy-clipboard">Copy to clipboard</button></div>
+            <div class="flex-40 layout-row layout-align-start-center pad-l-10 flex-xs-100 pad-10" ng-hide="changeBtn"><button type="button" ng-click="changeBtn=!changeBtn" class="copy-clipboard">Copied!</button></div>         
+        </div>
+    </div>  
+    <div class="ok-test-div pad-10 layout-xs-row layout-align-xs-center-center">
+        <button type="button" class="ok-button-div flex-xs-100" ng-click="viewTask()">OK, I did this</button>
+    </div>
+    <div ng-show="showMakeBtn">
+        <div  class="make-sure-test">
+            <i class="fa fa-check-circle" aria-hidden="true"></i> If you haven't yet, go create a brand new task status update.
+        </div>
+        <loading-test></loading-test>
+        <div class="task-status">Looking for the task status update, this might take a sec...</div>
+        
+    </div>
+</div>
+
+<div class="test-padd" ng-show="testSuccessPage||showSuccessScreen">
+    <div class="selected-app-logo"><img ng-src="{{testDataa.image_url || 'app/image/icon.png'}}"></div>
+    <div class="selected-app-head">{{testDataa.name}}</div>
+    <div class="test-success"><i class="fa fa-check-circle" aria-hidden="true"></i> <b>Test Successful!</b></div>
+    <div class="test-content" ng-hide="editDisable">
+        Alright got it! You can <a href="javaScript:;" ng-click="showTaskData()" ng-disabled="editDisable" ng-class="editDisable ? 'inactivestyleTrigger':''">view your task status update</a> to make sure everything looks OK.<br>We'll use this as a sample for setting up the rest of your Workflow. 
+    </div>
+    <div ng-if="taskData" class="taskdata">   
+        <div class="task-border">
+            <div ng-repeat="(key, data) in triggerResponseObj" class="taskrepeat">
+                <span class="keyValue">{{key}}</span>:  <span class="DataValue">{{data==null?'NA':data}}</span>
+            </div>
+        </div>
+    </div>  
+   
+     <div ng-if="triggerReponseCount==0" class="taskdata">   
+        <div class="no-task-border">
+            <div>No Task To View!!</div>
+        </div>
+    </div>
+   <button class="re-test" ng-disabled="editDisable" ng-class="editDisable ? 'inactivestyleTrigger':''"  ng-show="onlyEdit" ng-click="testSuccessPage = !testSuccessPage"><i class="fa fa-undo"></i> Re-test {{testDataa.name}} to get another task status update</button>
+    <div class="test-success-btn layout-xs-row layout-align-xs-center-center" ><button class="re-test-btn" ng-click="goToAction()"  ng-disabled="editDisable" ng-class="editDisable ? 'inactive-style':''">Continue</button></div>
+</div> 
+
+
+
